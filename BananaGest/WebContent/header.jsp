@@ -21,8 +21,7 @@
 					</div>
 					<div class="collapse navbar-collapse submenu" id="myNavbar">
 						<ul class="nav navbar-nav navList navbar-right">
-							<li><a class="navItems" href="listaproyectos.html">Projectos</a></li>
-							<li><a class="navItems" href="listatareas.html">Tareas</a></li>
+							<li><a class="navItems" href="listaproyectos.html">Projectos</a></li>							
 							<li id="profileBtn"><a class="navItems glyphicon glyphicon-user" href="perfil.jsp"><span class="profile">Perfil</span></a></li>
 						</ul>
 					</div>

@@ -8,6 +8,12 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="css/login.css">
 <title>Login</title>
+
+<%
+	String mierror= (String)request.getAttribute("mierror");
+	String errorclass=mierror!=null?"has-error":"";
+%>
+
 </head>
 
 <body>
@@ -18,10 +24,13 @@
 			<h2>Log In</h2>
 		</header>
 		<section>
-			<form action="listaproyectos.jsp"  method="get" id="loginForm" novalidate>
+		<% if(request.getAttribute("mierror")!=null){ %>
+			<div class="alert alert-danger"><%=request.getAttribute("mierror")%></div>
+		<%} %>
+			<form action="LoginServlet"  method="post" id="loginForm" novalidate>
 				<div>
 					<label for="email">Email: </label>
-					<input type="email" name="Email" id="email" placeholder="email@ejemplo.com"  required>
+					<input type="email" name="Email" id="email" class="<%=errorclass %>" placeholder="email@ejemplo.com"  required>
 					<div class="mensajes_error">
 						<div id="email[valueMissing]" class="errorP">Introduzca sus datos.</div>
 						<div id="email[typeMismatch]" class="errorP">El formato no se corresponde con un email.</div>
@@ -29,7 +38,7 @@
 				</div>
 				<div>
 					<label for="pass">Password: </label>
-					<input type="password" name="Password" id="pass" placeholder="password" minlength="6" pattern="[a-z 0-9]*" required>
+					<input type="password" name="Password" id="pass" class="<%=errorclass %>" placeholder="password" minlength="6" pattern="[a-z 0-9]*" required>
 					<div class="mensajes_error">
 						<div id="pass[valueMissing]" class="errorP">Introduzca sus datos.</div>
 						<div id="pass[tooShort]" class="errorP">El password debe contener como minimo 6 caracteres.</div>
