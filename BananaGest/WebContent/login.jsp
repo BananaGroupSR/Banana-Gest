@@ -2,14 +2,15 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<jsp:include page="head.jsp"></jsp:include>
 
+<head>
+<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="css/login.css">
 <title>Login</title>
 </head>
 
 <body>
-<jsp:include page="header.jsp"></jsp:include>
 
 <div class="box1">
 		<header>
@@ -17,7 +18,7 @@
 			<h2>Log In</h2>
 		</header>
 		<section>
-			<form action="home.html"  method="get" id="loginForm" novalidate>
+			<form action="listaproyectos.jsp"  method="get" id="loginForm" novalidate>
 				<div>
 					<label for="email">Email: </label>
 					<input type="email" name="Email" id="email" placeholder="email@ejemplo.com"  required>
@@ -38,12 +39,12 @@
 					<input class="btnLogin" type="submit" form="loginForm" value="Login" id="btnLoginId">
 				</div>
 			</form>
-			<a href="forgotPass.html">Has olvidado tu Password?</a>
+			<a href="#">Has olvidado tu Password?</a>
 		</section>
 	</div>
 </body>
 <!-- <script src="./js/login.js"></script> -->
-<script src="./js/login01.js"></script>
+<script src="js/login01.js"></script>
 
 
 </html>
