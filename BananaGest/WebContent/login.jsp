@@ -27,10 +27,10 @@
 		<% if(request.getAttribute("mierror")!=null){ %>
 			<div class="alert alert-danger"><%=request.getAttribute("mierror")%></div>
 		<%} %>
-			<form action="LoginServlet"  method="post" id="loginForm" novalidate>
+			<form action="login"  method="post" id="loginForm" novalidate>
 				<div>
 					<label for="email">Email: </label>
-					<input type="email" name="Email" id="email" class="<%=errorclass %>" placeholder="email@ejemplo.com"  required>
+					<input type="email" name="email" id="email" class="<%=errorclass %>" placeholder="email@ejemplo.com"  required>
 					<div class="mensajes_error">
 						<div id="email[valueMissing]" class="errorP">Introduzca sus datos.</div>
 						<div id="email[typeMismatch]" class="errorP">El formato no se corresponde con un email.</div>
@@ -38,7 +38,7 @@
 				</div>
 				<div>
 					<label for="pass">Password: </label>
-					<input type="password" name="Password" id="pass" class="<%=errorclass %>" placeholder="password" minlength="6" pattern="[a-z 0-9]*" required>
+					<input type="password" name="password" id="pass" class="<%=errorclass %>" placeholder="password" minlength="6" pattern="[a-z 0-9]*" required>
 					<div class="mensajes_error">
 						<div id="pass[valueMissing]" class="errorP">Introduzca sus datos.</div>
 						<div id="pass[tooShort]" class="errorP">El password debe contener como minimo 6 caracteres.</div>

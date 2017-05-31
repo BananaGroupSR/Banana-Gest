@@ -1,6 +1,7 @@
 package com.bananagroup.controllers;
 
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,21 +18,16 @@ public class LoginServlet extends HttpServlet {
 		rd.forward(request, response);		
 	}
 
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String email = request.getParameter("email");
-		String contrasena = request.getParameter("password");
-		
-		Pattern pat = Pattern.compile("\\b[\\w.%-]+@[-.\\w]+\\.[A-Za-z]{2,4}\\b");
-		Matcher matcher = pat.matcher(email);		
-		
-		if( email.equals("ricardo@r.es") && matcher.matches()){
-			response.getWriter().append("Bienvenido: ").
-			append(email).append("!!");
+		String email = request.getParameter("email");		
+			
+		if( email.equals("ricardo@r.es") || email.equals("juana@j.es") || email.equals("luis@l.es") ){
+			RequestDispatcher rd = request.getRequestDispatcher("listaproyectos.jsp");
+			rd.forward(request, response);
 		}else{
 			request.setAttribute("mierror", "No esta registrado malandro, se sientee..!!!");
 			doGet(request, response);
-		}
+		}		
 		
 	}
 

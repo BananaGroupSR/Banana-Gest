@@ -20,9 +20,10 @@
 						
 					</div>
 					<div class="collapse navbar-collapse submenu" id="myNavbar">
-						<ul class="nav navbar-nav navList navbar-right">
-							<li><a class="navItems" href="listaproyectos.html">Projectos</a></li>							
+						<ul class="nav navbar-nav navList navbar-right">												
 							<li id="profileBtn"><a class="navItems glyphicon glyphicon-user" href="perfil.jsp"><span class="profile">Perfil</span></a></li>
+							<li id="profileBtn"><a href="login.jsp"><span class="logout">LogOut</span></a></li>
+							
 						</ul>
 					</div>
 				</div>
