@@ -30,6 +30,55 @@ public class Proyecto {
 		//this.tareasPy = tareasPy;
 	}
 
+	public int getIdProyecto() {
+		return idProyecto;
+	}
+
+	public void setIdProyecto(int idProyecto) {
+		this.idProyecto = idProyecto;
+	}
+
+	public String getTituloPy() {
+		return tituloPy;
+	}
+
+	public void setTituloPy(String tituloPy) {
+		this.tituloPy = tituloPy;
+	}
+
+	public String getDescripcionPy() {
+		return descripcionPy;
+	}
+
+	public void setDescripcionPy(String descripcionPy) {
+		this.descripcionPy = descripcionPy;
+	}
+
+	public Date getFechaInicioPy() {
+		return fechaInicioPy;
+	}
+
+	public void setFechaInicioPy(Date fechaInicioPy) {
+		this.fechaInicioPy = fechaInicioPy;
+	}
+
+	public String getResponsablePy() {
+		return responsablePy;
+	}
+
+	public void setResponsablePy(String responsablePy) {
+		this.responsablePy = responsablePy;
+	}
+
+	public boolean isActivoPy() {
+		return activoPy;
+	}
+
+	public void setActivoPy(boolean activoPy) {
+		this.activoPy = activoPy;
+	}
+
 
 
 }
+
