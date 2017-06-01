@@ -16,8 +16,8 @@
 			<li class="active">Home</li>
 		</ol>
 		<!-- xxx Particularizo los títulos hi para usuario logueado xxx -->
-		<h2>Hola ${idUsuario}</h2>
-		<h1>Listado de tus proyectos</h1>
+		<h2>Bienvenido ${idUsuario} !!!</h2>
+		<h1>Listado de tus proyectos es:</h1>
 		<div class="row">
 			<form action="resultadoproyectos" method="get" id="searchPForm"
 				novalidate>
@@ -68,8 +68,7 @@
 								</li>
 								<li class="col-xs-12">
 									<p>
-										Fecha de Inicio: <span>${maq.fechaInicioPy} que era
-											00/00/00</span>
+										Fecha de Inicio: <span>${maq.fechaInicioPy}</span>
 									</p>
 								</li>
 								<li class="col-xs-12">
