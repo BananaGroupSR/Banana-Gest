@@ -20,7 +20,7 @@ public class ListaProyectosServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// Entramos en sesion:
+		// Entramos en la sesion:
 		HttpSession misession = (HttpSession) request.getSession();
 
 		if (misession.getAttribute("idUsuario") != null) {// "idUsuario"
@@ -54,13 +54,11 @@ public class ListaProyectosServlet extends HttpServlet {
 					new Proyecto(171230, "Proyecto 04 de Luis", "Descriccion del Proyecto 04 de Luis",
 							new GregorianCalendar(2017, Calendar.DECEMBER, 30).getTime(), "Luis", "No Activo") };
 
-			String email = request.getParameter("email");
+			String email = (String) request.getAttribute("email");
 
 			if (email.equals("ricardo@r.es")) {
 
 				misession.setAttribute("listaProyectosAMostrar", "ricardo@r.es");
-
-
 
 				request.setAttribute("listaProyectosAMostrar", listaProyectosRicardo);
 				request.getRequestDispatcher("listaproyectos.jsp").forward(request, response);
