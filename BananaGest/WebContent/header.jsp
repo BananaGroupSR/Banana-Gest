@@ -7,7 +7,7 @@
 			<nav class="navbar navbar-default menu">
 				<div class="row">			
 					<a class="navbar-brand" href="listaproyectos.jsp">
-						<h1 class="logo">Banana GEST</h1>
+						<img src="./imgs/bananagestA-02.png" class="logologin" alt="logoImg" width="250px" height="95px">
 					</a>
 				</div>
 				<div class="row">
