@@ -2,7 +2,6 @@ package com.bananagroup.controllers;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.GregorianCalendar;
 
 import javax.servlet.ServletException;
@@ -20,7 +19,7 @@ public class ListaProyectosServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// Entramos en la sesion:
+		// Entramos en sesion:
 		HttpSession misession = (HttpSession) request.getSession();
 
 		if (misession.getAttribute("idUsuario") != null) {// "idUsuario"
@@ -54,7 +53,7 @@ public class ListaProyectosServlet extends HttpServlet {
 					new Proyecto(171230, "Proyecto 04 de Luis", "Descriccion del Proyecto 04 de Luis",
 							new GregorianCalendar(2017, Calendar.DECEMBER, 30).getTime(), "Luis", "No Activo") };
 
-			String email = (String) request.getAttribute("email");
+			String email = request.getParameter("email");
 
 			if (email.equals("ricardo@r.es")) {
 
