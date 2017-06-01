@@ -21,16 +21,20 @@
 		
 		<div class="wrapper">
     	
+    	<c:if test="${not empty mierror}">
+			<div class="alert alert-danger">${mierror}</div>
+		</c:if>
+    	
     	<form class="form-signin" action="login" method="post" id="LoginForm" novalidate>
         <h2 class="form-signin-heading">Please login</h2>
-        <input type="text" class="form-control" name="email" id="email" placeholder="Email address" required="" autofocus="" />
+        <input type="text" class="form-control ${errorclass}" name="email" id="email" placeholder="Email address" required="" autofocus="" />
 
         <div class="mensajes_error">
             <div id="email[valueMissing]" class="errorP">Introduzca sus datos.</div>
             <div id="email[typeMismatch]" class="errorP">El formato no se corresponde con un email.</div>
         </div>
 
-        <input type="password" class="form-control" name="password" id="pass" placeholder="Password" required="" />
+        <input type="password" class="form-control ${errorclass}" name="password" id="pass" placeholder="Password" required="" />
 
         <div class="mensajes_error">
             <div id="pass[valueMissing]" class="errorP">Introduzca sus datos.</div>
