@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- Añadida la linea anterior para uso de JAVA -->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -46,23 +46,24 @@
 
 			</form>
 			<div class="buttons">
-				<a href="crearproyecto.jsp" class="btn" aria-label="crearProyecto">Crear Proyecto</a>
+				<a href="crearproyecto.jsp" class="btn" aria-label="crearProyecto">Crear
+					Proyecto</a>
 			</div>
 		</div>
-		<!-- xxxxxxxxxxxxxxxxxxxxxx -->
-		<!-- MODIFICACION PARA JAVA -->
-		<!-- xxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- xxxxxxxxxxxxxxxxxxxxxx --> <!-- MODIFICACION PARA JAVA --> <!-- xxxxxxxxxxxxxxxxxxxxxx -->
 		<div class="container-fluid">
 			<ul class="row">
-				<!-- Realizacion de For Each para los proyectos del usuario logueado-->	
-				<c:forEach var="maq"  items="${listaProyectosAMostrar}" varStatus="counter">
-				
+				<!-- Realizacion de For Each para los proyectos del usuario logueado-->
+				<c:forEach var="maq" items="${listaProyectosAMostrar}"
+					varStatus="counter">
+
 					<li class="box1 linkBox col-xs-12 col-sm-6" id="project1Id">
-						<a href="detalleproyecto.jsp" aria-label="proyecto1"> 
+						<!-- xxx ACCESO A LA LISTA DE TAREAS DL PROYECTO CLICADO A TRAVES DE ENLACE MANDANDO LA LLAMADA QUE LEE EL DetalleProyectosServlet  xxx -->
+						<a href="DetalleProyectoServlet" aria-label="proyecto1">
 							<ul class="infoPro col-xs-12 col-sm-8">
 								<li class="col-xs-12">
 									<p>
-										Titulo: <span>${maq.tituloPy} que era el Proyecto 1</span>
+										Titulo: <span>${maq.tituloPy}</span>
 									</p>
 								</li>
 								<li class="col-xs-12">
@@ -73,12 +74,12 @@
 								</li>
 								<li class="col-xs-12">
 									<p>
-										Asignado a: <span>${maq.responsablePy} que era Jaimito</span>
+										Asignado a: <span>${maq.responsablePy}</span>
 									</p>
 								</li>
 								<li class="col-xs-12">
 									<p>
-										Status: <span>${maq.activoPy} que era En desarrollo</span>
+										Status: <span>${maq.activoPy}</span>
 									</p>
 								</li>
 								<li class="col-xs-12">
@@ -86,12 +87,12 @@
 										data_Id="project1Id" aria-label="botonBorrarP"></button>
 								</li>
 							</ul>
-						</a>
+					</a>
 					</li>
 				</c:forEach>
-		<!-- xxxxxxxxxxxXXXXXXXXXxxxxxxxxxxx -->
-		<!-- FINAL DE MODIFICACION PARA JAVA -->
-		<!-- xxxxxxxxxXXXXXXXXXxxxxxxxxxxxxx -->
+				<!-- xxxxxxxxxxxXXXXXXXXXxxxxxxxxxxx -->
+				<!-- FINAL DE MODIFICACION PARA JAVA -->
+				<!-- xxxxxxxxxXXXXXXXXXxxxxxxxxxxxxx -->
 			</ul>
 		</div>
 		</section>
