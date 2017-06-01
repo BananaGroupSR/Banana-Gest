@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 
 		if (email.equals("ricardo@r.es") || email.equals("juana@j.es") || email.equals("luis@l.es")) {
 			HttpSession misession = (HttpSession) request.getSession();
-			misession.setAttribute("idUsuario","" );
+			misession.setAttribute("idUsuario",email );
 			response.getWriter().append("Bienvenido: ").append(email).append("!!");
 
 			request.getRequestDispatcher("/listaproyectos").forward(request, response);
