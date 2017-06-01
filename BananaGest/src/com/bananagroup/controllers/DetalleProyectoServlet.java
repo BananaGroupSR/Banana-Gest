@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import com.bananagroup.models.Tarea;
 
-@WebServlet("/DetalleProyectoServlet")
+@WebServlet("/detalle-proyecto")
 public class DetalleProyectoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

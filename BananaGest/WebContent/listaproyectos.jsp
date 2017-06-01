@@ -50,7 +50,7 @@
 					Proyecto</a>
 			</div>
 		</div>
-		<!-- xxxxxxxxxxxxxxxxxxxxxx --> <!-- MODIFICACION PARA JAVA --> <!-- xxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- xxxxxxxxxxxxxxxxxxxxxx  MODIFICACION PARA JAVA  xxxxxxxxxxxxxxxxxxxxxx -->
 		<div class="container-fluid">
 			<ul class="row">
 				<!-- Realizacion de For Each para los proyectos del usuario logueado-->
@@ -59,7 +59,7 @@
 
 					<li class="box1 linkBox col-xs-12 col-sm-6" id="project1Id">
 						<!-- xxx ACCESO A LA LISTA DE TAREAS DL PROYECTO CLICADO A TRAVES DE ENLACE MANDANDO LA LLAMADA QUE LEE EL DetalleProyectosServlet  xxx -->
-						<a href="DetalleProyectoServlet" aria-label="proyecto1">
+						<a href="detalle-proyecto" aria-label="proyecto1">
 							<ul class="infoPro col-xs-12 col-sm-8">
 								<li class="col-xs-12">
 									<p>
