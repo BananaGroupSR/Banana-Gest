@@ -12,10 +12,7 @@
 	<div class="container">
 
 		<section class="container-fluid">
-		<ol class="breadcrumb">
-			<li><a href="listaproyectos.jsp">Home</a></li>
-			<li class="active">Proyecto</li>
-		</ol>
+		
 		<div class="pageTitle ">
 			<h1>Proyecto 1</h1>
 		</div>

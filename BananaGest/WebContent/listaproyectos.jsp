@@ -12,9 +12,7 @@
 	<div class="container" id="containerId">
 
 		<section class="container-fluid">
-		<ol class="breadcrumb">
-			<li class="active">Home</li>
-		</ol>
+		
 		<!-- xxx Particularizo los títulos hi para usuario logueado xxx -->
 		<h2>Bienvenido ${idUsuario} !!!</h2>
 		<h1>Listado de tus proyectos es:</h1>
