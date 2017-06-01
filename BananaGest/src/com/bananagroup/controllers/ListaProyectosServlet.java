@@ -1,6 +1,9 @@
 package com.bananagroup.controllers;
 
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,10 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.jasper.tagplugins.jstl.core.If;
-
 import com.bananagroup.models.Proyecto;
-
 
 @WebServlet("/listaproyectos")
 public class ListaProyectosServlet extends HttpServlet {
@@ -22,14 +22,18 @@ public class ListaProyectosServlet extends HttpServlet {
 		// Entramos en sesion:
 		HttpSession misession = (HttpSession) request.getSession();
 
-		if (misession.getAttribute("idUsuario")!=null) {// "idUsuario"
+		
+		if (misession.getAttribute("idUsuario") != null) {// "idUsuario"
 			Proyecto[] listaProyectos = {
-					new Proyecto(170101, "Proyecto 01 de Ricardo", "Descripción del Proyecto 01 de Ricardo", 2017/01/01, "Ricardo", true),
-					new Proyecto(170720, "Proyecto 02 de Ricardo", "Descriccion del Proyecto 02 de Ricardo", 2017/07/20, "Ricardo", true),
-					new Proyecto(170415, "Proyecto 03 de Ricardo", "Descriccion del Proyecto 03 de Ricardo", 2017/04/15, "Ricardo", false),
-					new Proyecto(171030, "Proyecto 04 de Ricardo", "Descriccion del Proyecto 04 de Ricardo", 2017/10/30, "Ricardo", false),		
-					};
-			
+					new Proyecto(170101, "Proyecto 01 de Ricardo", "Descripción del Proyecto 01 de Ricardo",
+							new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime(), "Ricardo", "Activo"),
+					new Proyecto(170720, "Proyecto 02 de Ricardo", "Descriccion del Proyecto 02 de Ricardo",
+							new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime(), "Ricardo", "Activo"),
+					new Proyecto(170415, "Proyecto 03 de Ricardo", "Descriccion del Proyecto 03 de Ricardo",
+							new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime(), "Ricardo", "No Activo"),
+					new Proyecto(171030, "Proyecto 04 de Ricardo", "Descriccion del Proyecto 04 de Ricardo",
+							new GregorianCalendar(2014, Calendar.FEBRUARY, 11).getTime(), "Ricardo", "No Activo"), };
+
 			request.setAttribute("listaProyectosAMostrar", listaProyectos);
 			request.getRequestDispatcher("listaproyectos.jsp").forward(request, response);
 

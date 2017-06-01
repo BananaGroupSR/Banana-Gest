@@ -14,4 +14,30 @@ public class Tarea {
 		this.descripcionTr=descripcionTr;
 		this.responsableTr=responsableTr;
 	}
+
+	public int getIdTarea() {
+		return idTarea;
+	}
+
+	public void setIdTarea(int idTarea) {
+		this.idTarea = idTarea;
+	}
+
+	public String getDescripcionTr() {
+		return descripcionTr;
+	}
+
+	public void setDescripcionTr(String descripcionTr) {
+		this.descripcionTr = descripcionTr;
+	}
+
+	public String getResponsableTr() {
+		return responsableTr;
+	}
+
+	public void setResponsableTr(String responsableTr) {
+		this.responsableTr = responsableTr;
+	}
+	
 }
+

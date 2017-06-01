@@ -1,5 +1,6 @@
 package com.bananagroup.models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Proyecto {
@@ -9,7 +10,7 @@ public class Proyecto {
 	private String descripcionPy;
 	private Date fechaInicioPy;
 	private String responsablePy;
-	private boolean activoPy;
+	private String activoPy;
 	// private Tarea[] tareasPy; //define un Array de las tareas del proyecto.
 	// Cada tarea se define con su claseModelo Tarea.java  PERO NO LA PRESENTAMOS EN ESTA LISTA
 
@@ -18,8 +19,8 @@ public class Proyecto {
 	// tareas) {
 
 
-	public Proyecto(int idProyecto, String tituloPy, String descripcionPy, int i, String responsablePy,
-			boolean activoPy) {
+	public Proyecto(int idProyecto, String tituloPy, String descripcionPy, Date fechaInicioPy, String responsablePy,
+			String activoPy) {
 		// Inicializacion de los atributos de Proyecto
 		this.idProyecto = idProyecto;
 		this.tituloPy = tituloPy;
@@ -29,6 +30,8 @@ public class Proyecto {
 		this.activoPy = activoPy;
 		//this.tareasPy = tareasPy;
 	}
+
+
 
 	public int getIdProyecto() {
 		return idProyecto;
@@ -70,11 +73,11 @@ public class Proyecto {
 		this.responsablePy = responsablePy;
 	}
 
-	public boolean isActivoPy() {
+	public String getActivoPy() {
 		return activoPy;
 	}
 
-	public void setActivoPy(boolean activoPy) {
+	public void setActivoPy(String activoPy) {
 		this.activoPy = activoPy;
 	}
 

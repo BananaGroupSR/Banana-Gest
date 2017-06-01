@@ -21,14 +21,14 @@ public class DetalleProyectoServlet extends HttpServlet {
 		
 		if (misession.getAttribute("idUsuario")!=null) {// "idUsuario"
 			Tarea[] listaTareas = {
-					new Tarea(110, "Descripción de la tarea 1", "Ricardo"),
-					new Tarea(120, "Descripción de la tarea 2", "Juana"),
-					new Tarea(130, "Descripción de la tarea 3", "Luis"),
-					new Tarea(140, "Descripción de la tarea 4", "Ricardo"),		
+					new Tarea(110, "Esta tarea consta de realizar una faena del proyecto", "Ricardo"),
+					new Tarea(120, "Esta tarea consta de organizar un evento del proyecto", "Juana"),
+					new Tarea(130, "En esta tarea se deben obtener resultados del proyecto", "Luis"),
+					new Tarea(140, "El trabajo a realizar en esta tarea es clasificar los conceptos del proyecto", "Ricardo"),		
 					};
 			
-			request.setAttribute("listaTareaAMostrar", listaTareas);
-			request.getRequestDispatcher("listaTareas.jsp").forward(request, response);
+			request.setAttribute("listaTareasAMostrar", listaTareas);
+			request.getRequestDispatcher("detalleproyecto.jsp").forward(request, response);
 
 		} else {
 			misession.invalidate();
