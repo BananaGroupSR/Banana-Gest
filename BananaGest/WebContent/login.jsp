@@ -23,7 +23,7 @@
     	
     	<form class="form-signin" action="login" method="post" id="LoginForm" novalidate>
         <h2 class="form-signin-heading">Please login</h2>
-        <input type="text" class="form-control" name="username" id="email" placeholder="Email address" required="" autofocus="" />
+        <input type="text" class="form-control" name="email" id="email" placeholder="Email address" required="" autofocus="" />
 
         <div class="mensajes_error">
             <div id="email[valueMissing]" class="errorP">Introduzca sus datos.</div>
